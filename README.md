@@ -8,3 +8,5 @@ git push
 
 Run locally with:
 streamlit run Home.py
+
+Run Online through:

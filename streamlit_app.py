@@ -1,27 +1,19 @@
 import streamlit as st
+from home import show as show_home
+from about import show as show_about
+from contact import show as show_contact
 
 # Set page configuration
-st.set_page_config(page_title="Streamlit Multi-Page App", layout="wide")
+st.set_page_config(page_title="Portfolio Paul Brodmann", layout="wide")
 
 # Sidebar navigation
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Home", "About"])
+page = st.sidebar.radio("Go to", ["Home", "About", "Contact"])
 
-# Home Page
+# Show the corresponding page
 if page == "Home":
-    st.title("Home Page")
-    st.write("""
-        Welcome to the Home Page!  
-        This is a simple baseline app with multiple pages.
-    """)
-    st.image("https://placekitten.com/800/400", caption="Example Image", use_column_width=True)
-
-# About Page
+    show_home()
 elif page == "About":
-    st.title("About Page")
-    st.write("""
-        This is the About Page.  
-        Here you can provide information about yourself or your app.
-    """)
-    st.info("Streamlit makes it easy to build web apps for data and machine learning.")
-
+    show_about()
+elif page == "Contact":
+    show_contact()

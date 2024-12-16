@@ -9,7 +9,7 @@ st.title("My Image Gallery")
 # Create columns for the gallery layout
 col1, col2  = st.columns(2)
 with col1:
-    st.image(utls.imagerise("./images/screensaver.png",[960,540]), caption="Resized Kitten Image")
+    st.image(utls.imagerise("./images/Screensaver.png",[960,540]), caption="Resized Kitten Image")
 with col2:
     st.write("""
     Welcome to the Home Page!  
